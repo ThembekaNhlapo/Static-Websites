@@ -1,358 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreshCart - Buy Fresh Veggies</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Childhood</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            background-color: #fdf6e3;
+            color: #333333;
+            margin: 0;
+            padding: 20px 40px;
+            line-height: 1.6;
+        }
 
-<!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            text-align: center;
+            background-color: #ffe8b3;
+            padding: 15px;
+            margin: 30px 0 15px 0;
+            border-radius: 8px;
+        }
 
-<style>
-  body {
-    background-color: #f4f9f2;
-  }
+        h2 {
+            color: #b5651d;
+            font-size: 1.6em;
+            margin: 25px 0 10px 0;
+            padding-left: 10px;
+            border-left: 5px solid #b5651d;
+        }
 
-  .navbar-brand {
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
+        p {
+            color: #444444;
+            font-size: 1.05em;
+            margin: 10px 0;
+            padding: 5px 10px;
+            text-align: left;
+        }
 
-  .hero-banner {
-    background: linear-gradient(135deg, #4c9a3d, #7fb069);
-    color: #fff;
-    border-radius: 0 0 24px 24px;
-  }
+        em {
+            color: #c0392b;
+            font-style: italic;
+        }
 
-  .product-card {
-    border: none;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    background-color: #fff;
-  }
+        b {
+            color: #1b7837;
+        }
 
-  .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
-  }
+        img {
+            display: block;
+            margin: 15px auto;
+            max-width: 100%;
+            border: 3px solid #ffe8b3;
+            border-radius: 6px;
+            padding: 4px;
+        }
 
-  .product-img-wrap {
-    overflow: hidden;
-    background-color: #eef7ea;
-    position: relative;
-  }
-
-  .product-img-wrap img {
-    transition: transform 0.4s ease;
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-  }
-
-  /* Hover effect: scale the image on hover */
-  .product-img-wrap:hover img {
-    transform: scale(1.15) rotate(1deg);
-  }
-
-  .organic-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #4c9a3d;
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 12px;
-  }
-
-  .product-title {
-    font-weight: 600;
-    font-size: 1.05rem;
-    min-height: 48px;
-  }
-
-  .product-price {
-    font-weight: 700;
-    color: #2d6a1f;
-    font-size: 1.15rem;
-  }
-
-  .unit-label {
-    font-size: 0.8rem;
-    color: #888;
-  }
-
-  .btn-buy {
-    border-radius: 20px;
-    font-weight: 500;
-    background-color: #4c9a3d;
-    border-color: #4c9a3d;
-  }
-
-  .btn-buy:hover {
-    background-color: #3d7c31;
-    border-color: #3d7c31;
-  }
-
-  footer {
-    background-color: #2b3a26;
-    color: #f4f9f2;
-    margin-top: 4rem;
-  }
-
-  footer .logo-box img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    background: #fff;
-    border-radius: 50%;
-    padding: 6px;
-  }
-
-  footer .form-control {
-    border-radius: 6px;
-  }
-
-  footer h5 {
-    font-weight: 600;
-  }
-</style>
+        a {
+            color: #8e44ad;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#2d6a1f;">
-  <div class="container">
-    <a class="navbar-brand" href="#">🥦 FreshCart</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Vegetables</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <h1>Hobbies</h1>
 
-<!-- Hero -->
-<div class="hero-banner text-center py-5 mb-5">
-  <div class="container">
-    <h1 class="fw-bold">Farm Fresh Vegetables</h1>
-    <p class="mb-0">Straight from the farm to your table. Hover a veggie to see it up close!</p>
-  </div>
-</div>
+    <h2>Playing Netball</h2>
+    <p>I enjoyed playing netball with my friends after school.</p>
+    <p>I remember feeling <em>very excited</em> whenever I scored a goal.</p>
 
-<!-- Products Grid -->
-<div class="container mb-5">
-  <div class="row g-4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6P0Mu05VCbwxaNODUFUTU2oiQh3b9qTZcxqfqpuHDAf014xHF6m2VYP8&s=10" 
+    alt="Playing Netball is one of my favourite things to do"> 
 
-    <!-- Product 1 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <span class="organic-badge">Organic</span>
-          <img src="https://catalog.sixty60.co.za/v2/files/6a5f78c7183a683564e2048e?width=1440&height=1440" class="img-fluid" alt="Tomatoes">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">Fresh Tomatoes</h6>
-          <p class="unit-label mb-1">per kg</p>
-          <p class="product-price mb-3">R29.99</p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
+    <h2>Dancing</h2>
+    <p>I loved <b>dancing</b> to my favorite songs with my family.</p>
+    <p> I remember dancing for my grandfather and he had a big smile on his face.</p>
 
-    <!-- Product 2 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <span class="organic-badge">Organic</span>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6aw6cO2SsFy6oqKm8B370hUhWL75k0GTkVLW5umZg4n3Nf8fZdLNjnsQy&s=10" class="img-fluid" alt="Carrots">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">Crunchy Carrots</h6>
-          <p class="unit-label mb-1">per kg</p>
-          <p class="product-price mb-3">R19.99/p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYm57Z9OqeiWKMjEAKlmup1nMoBm8c25y9TGGKOf19EEITgKJsKrB4MVav&s=10"
+    alt="Dancing is such a fun sport!">
 
-    <!-- Product 3 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <img src="https://catalog.sixty60.co.za/v2/files/6a996533637d70ba8dbc7051?width=1200&height=1200" class="img-fluid" alt="Broccoli">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">Green Broccoli</h6>
-          <p class="unit-label mb-1">per head</p>
-          <p class="product-price mb-3">R15.90</p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
+    <h1>Toys</h1>
 
-    <!-- Product 4 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <span class="organic-badge">Organic</span>
-          <img src="https://produits.bienmanger.com/35371-0w470h470_Eggplant_From_France.jpg" class="img-fluid" alt="Eggplant">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">Purple Eggplant</h6>
-          <p class="unit-label mb-1">per piece</p>
-          <p class="product-price mb-3">R12.99</p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
+    <h2>Barbie Dolls</h2>
+    <p>I had a collection of Barbie dolls that I played with for hours.</p>
+    <p>I remember creating different <em>outfits</em> and stories for my dolls.</p>
 
-    <!-- Product 5 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <img src="https://retropack.co.za/wp-content/uploads/2021/04/Peppers_Mixed.jpg" class="img-fluid" alt="Bell Peppers">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">Bell Peppers</h6>
-          <p class="unit-label mb-1">per kg</p>
-          <p class="product-price mb-3">R14.99</p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
+    <img src="https://www.babiesrus.co.za/media/catalog/product/cache/de5e9c76e117fba1e9845c54821a7c69/8/8/8879661694642_imageoutofpack.png"
+    alt="Barbie dolls are so girly!">
 
-    <!-- Product 6 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <span class="organic-badge">Organic</span>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzuaJnzLiHdLhaZcA6tF0JfHQeYVmNXa32zx95dJdGP_GV7dAHqbd-r0&s=10" class="img-fluid" alt="Cucumber">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">Fresh Cucumber</h6>
-          <p class="unit-label mb-1">per kg</p>
-          <p class="product-price mb-3">R9.99</p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
+    <h2>Puzzles</h2>
+    <p>I enjoyed working on puzzles with my siblings.</p>
+    <p> I remember feeling very <b>accomplished</b> when I completed a difficult puzzle.</p>
 
-    <!-- Product 7 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <img src="https://catalog.sixty60.co.za/v2/files/6a5a173a3e3c5006ee2790b7?width=1440&height=1440" class="img-fluid" alt="Spinach">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">Baby Spinach</h6>
-          <p class="unit-label mb-1">per bunch</p>
-          <p class="product-price mb-3">R19.99</p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Product 8 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <span class="organic-badge">Organic</span>
-          <img src="https://catalog.sixty60.co.za/v2/files/6a5a16847c34b184e18abb3e?width=1440&height=1440" class="img-fluid" alt="Sweet Potato">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">Sweet Potato</h6>
-          <p class="unit-label mb-1">per kg</p>
-          <p class="product-price mb-3">R25.99</p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Product 9 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW4owRuci6E9LRA4BOasAs-KjnOS7oziI1tSEwVZ6kwQ&s=10" class="img-fluid" alt="Cauliflower">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">White Cauliflower</h6>
-          <p class="unit-label mb-1">per head</p>
-          <p class="product-price mb-3">R14.99</p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Product 10 -->
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="card product-card">
-        <div class="product-img-wrap">
-          <span class="organic-badge">Organic</span>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8d4HbDTA8JYcnaa2r09cMkGjchNfwk9CU2SKKQG4Yx-El0cwHjGKFpctB&s=10" class="img-fluid" alt="Lettuce">
-        </div>
-        <div class="card-body text-center">
-          <h6 class="product-title">Crisp Lettuce</h6>
-          <p class="unit-label mb-1">per head</p>
-          <p class="product-price mb-3">R17.99</p>
-          <button class="btn btn-buy w-100">Buy</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="py-5">
-  <div class="container">
-    <div class="row align-items-center g-4">
-
-      <!-- Logo -->
-      <div class="col-12 col-md-2 text-center text-md-start logo-box">
-        <img src="https://placehold.co/60x60/ffffff/2d6a1f?text=FC" alt="Company Logo">
-      </div>
-
-      <!-- Contact Form (horizontal) -->
-      <div class="col-12 col-md-10">
-        <h5 class="mb-3">Get in touch</h5>
-        <form>
-          <div class="row g-2 align-items-center">
-            <div class="col-12 col-md-3">
-              <input type="text" class="form-control" placeholder="Your Name">
-            </div>
-            <div class="col-12 col-md-3">
-              <input type="email" class="form-control" placeholder="Your Email">
-            </div>
-            <div class="col-12 col-md-3">
-              <input type="tel" class="form-control" placeholder="Phone Number">
-            </div>
-            <div class="col-12 col-md-3">
-              <button type="submit" class="btn btn-success w-100">Submit</button>
-            </div>
-          </div>
-        </form>
-      </div>
-
-    </div>
-    <div class="text-center text-muted mt-4 small">
-      &copy; 2026 FreshCart. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <img src="https://cdn.thewirecutter.com/wp-content/media/2022/11/puzzle-storage-2048px-1418-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp"
+    alt="Life is a puzzle.">
 
 </body>
 </html>
