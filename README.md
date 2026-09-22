@@ -1,35 +1,29 @@
-# My Childhood 🧸
+# FreshCart 🥦
 
-A single-page personal memory/scrapbook website built with plain HTML and CSS, sharing reflections on favorite childhood hobbies and toys.
+A single-page static storefront concept for a fresh vegetable delivery service, built with HTML and Bootstrap 5.
 
 ## Overview
 
-This is a simple, story-style personal page organized into two sections — **Hobbies** and **Toys** — each broken into sub-topics with a short reflective paragraph and an accompanying image. It's a static, single-file page with a warm, journal-like visual theme (cream background, mustard highlights, and rust-colored accents).
-
-## Content Sections
-
-- **Hobbies**
-  - Playing Netball
-  - Dancing
-- **Toys**
-  - Barbie Dolls
-  - Puzzles
-
-Each sub-section includes one or two descriptive paragraphs (with emphasized/bolded words for feeling and tone) and a relevant image.
+FreshCart is a front-end demo/landing page showcasing a simple product catalog UI — a hero banner, a responsive grid of vegetable products with "Buy" buttons, and a footer with a contact form. It's a static mockup (no backend, no working cart or form submission) intended as a starting point for a real e-commerce build or a UI/design reference.
 
 ## Features
 
-- Warm, scrapbook-inspired color palette (cream background, honey-yellow headers, rust-orange section markers)
-- Distinct styling for `<em>` (red-brown italics) and `<b>` (green bold) text to highlight emotional emphasis
-- Framed, rounded images centered beneath each paragraph
-- Clean, readable typography using the Verdana/Geneva font stack
-- Fully static — no scripts, frameworks, or build tools
+- **Responsive navbar** with brand logo and links (Home, Vegetables, Cart, Contact)
+- **Hero banner** with gradient background and call-to-action copy
+- **Product grid** of 10 vegetable cards, each showing:
+  - Product image with a hover zoom/rotate effect
+  - "Organic" badge on select items
+  - Name, unit (per kg / per head / per bunch / per piece), and price in ZAR (R)
+  - A "Buy" button (currently non-functional — no cart logic wired up)
+- **Footer** with company logo, a horizontal contact form (name, email, phone), and copyright notice
+- Fully responsive layout (mobile, tablet, desktop) via Bootstrap's grid system
 
 ## Tech Stack
 
 - **HTML5**
-- **Custom CSS** (embedded in a `<style>` block — no external stylesheets or frameworks)
-- No JavaScript
+- **[Bootstrap 5.3.8](https://getbootstrap.com/)** — loaded via CDN (CSS + JS bundle)
+- **Custom CSS** (inline `<style>` block) for the green/organic theme, card hover effects, and footer styling
+- No JavaScript framework, build step, or backend — it's a single self-contained `index.html` file
 
 ## Getting Started
 
@@ -38,27 +32,28 @@ No installation or build tools required.
 1. Download or clone the file.
 2. Open `index.html` directly in any modern web browser.
 
-An internet connection is needed for the images to load, since they're hotlinked from external sources rather than stored locally.
+That's it — Bootstrap is pulled from a CDN, so an internet connection is needed for styling and icons to load correctly.
 
 ## File Structure
 
 ```
 .
-└── index.html   # Entire page: markup and embedded styles
+└── index.html   # Entire page: markup, embedded styles, and script tags
 ```
 
-## Known Issues / Notes
+## Known Issues
 
-- All images are hotlinked from third-party sources (a retailer's product catalog, a cached Google thumbnail service, and a news site's CDN). These links could break or be removed at any time — consider downloading and self-hosting the images for a more permanent page.
-- The page has no navigation, headings hierarchy beyond `<h1>`/`<h2>`, or metadata (e.g., author, date) — fine for a personal one-off page, but worth adding if this grows into a multi-page site.
+- The **Carrots** product card has a malformed price tag (`<p class="product-price mb-3">R19.99/p>`) — missing the opening `<` on the closing tag. This should be fixed to `</p>` to avoid rendering issues.
+- Several product images are hotlinked from third-party sources (Google's cached thumbnail service, external retailer catalogs) rather than hosted locally — consider downloading and self-hosting these for production use and to avoid broken links.
+- Buy buttons and the contact form are static placeholders with no actual functionality (no cart state, no form validation/submission handling).
 
 ## Possible Next Steps
 
-- Self-host all images
-- Add more sections/memories (e.g., School, Friends, Family)
-- Add simple navigation if the page is split across multiple sections or pages
-- Add alt-text refinements and basic accessibility improvements (e.g., skip links, semantic landmarks)
+- Wire up cart functionality (add to cart, cart count, checkout flow)
+- Hook the contact form up to a backend or form service (e.g., Formspree, a serverless function)
+- Self-host product images and add lazy loading
+- Add a real routing/navigation structure if additional pages are introduced
 
 ## License
 
-No license specified. This is personal content — add a license only if you intend to share or reuse it more broadly.
+No license specified. Add one (e.g., MIT) if this project will be shared or open-sourced.
